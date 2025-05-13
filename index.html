@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XINO Design Group - Exhibition Stand Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Using a specific version of Three.js with proper OrbitControls from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="background-canvas"></canvas>
+
+    <div class="loading-screen">
+        <div class="loader"></div>
+        <div class="company-name">XINO DESIGN GROUP</div>
+    </div>
+
+    <header>
+        <div class="logo">XINO</div>
+        <nav>
+            <ul>
+                <li><a href="#slide-1" class="active">Home</a></li>
+                <li><a href="#slide-2">Portfolio</a></li>
+                <li><a href="#slide-3">About</a></li>
+                <li><a href="#slide-4">Services</a></li>
+                <li><a href="#slide-5">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="timeline-container">
+        <div class="timeline-indicator">
+            <div class="indicator-dot active" data-slide="1"></div>
+            <div class="indicator-dot" data-slide="2"></div>
+            <div class="indicator-dot" data-slide="3"></div>
+            <div class="indicator-dot" data-slide="4"></div>
+            <div class="indicator-dot" data-slide="5"></div>
+        </div>
+
+        <div class="slides-container">
+            <!-- Slide 1: Home -->
+            <section id="slide-1" class="slide active">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h1>XINO DESIGN GROUP</h1>
+                        <h2>Exhibition Stand Design & Build</h2>
+                        <p>Tailored solutions that reflect your brand's identity</p>
+                        <a href="#slide-2" class="btn slide-btn">View Our Work</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="0/main.png" alt="XINO Design Group">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Portfolio (moved from slide 3) -->
+            <section id="slide-2" class="slide">
+                <div class="slide-content portfolio-slide-content">
+                    <div class="slide-text">
+                        <h2>Our Portfolio</h2>
+                        <div class="divider"></div>
+                        <p>Explore our diverse collection of exhibition stand designs. Each project is crafted with attention to detail and tailored to meet specific brand objectives.</p>
+                    </div>
+                    
+                    <div class="portfolio-overview">
+                        <div class="portfolio-grid">
+                            <div class="portfolio-item" data-index="0">
+                                <img src="0/روجلد_0003_Layer-30.png" alt="Exhibition Stand">
+                                <div class="portfolio-item-overlay">
+                                    <h3>Custom Exhibition Stand</h3>
+                                    <p>Stand Size: 20m×50m - Usable Area: 1000 sqm - City: Tabriz</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-item" data-index="1">
+                                <img src="0/روجلد_0002_Layer-31.png" alt="Exhibition Stand">
+                                <div class="portfolio-item-overlay">
+                                    <h3>Modern Exhibition Design</h3>
+                                    <p>Exhibition Stand Design By XINO</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-item" data-index="2">
+                                <img src="0/روجلد_0001_Layer-32.png" alt="Exhibition Stand">
+                                <div class="portfolio-item-overlay">
+                                    <h3>Innovative Stand Design</h3>
+                                    <p>Premium Exhibition Space with Custom Features</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-item" data-index="3">
+                                <img src="0/روجلد_0000_Layer-33.png" alt="Exhibition Stand">
+                                <div class="portfolio-item-overlay">
+                                    <h3>Compact Exhibition Stand</h3>
+                                    <p>Efficient Use of Space for Maximum Impact</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-item" data-index="4">
+                                <img src="0/روجلد_0023_Layer-25.png" alt="Exhibition Stand">
+                                <div class="portfolio-item-overlay">
+                                    <h3>Premium Exhibition Space</h3>
+                                    <p>Custom Exhibition Stand Design & Build</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-detail">
+                        <div class="portfolio-detail-showcase">
+                            <div class="detail-navigation">
+                                <button class="detail-nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <div class="detail-indicator">
+                                    <span class="detail-current">1</span> / <span class="detail-total">5</span>
+                                </div>
+                                <button class="detail-nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            
+                            <div class="detail-container">
+                                <div class="detail-slide active" data-index="0">
+                                    <div class="detail-image">
+                                        <img src="0/روجلد_0003_Layer-30.png" alt="Exhibition Stand">
+                                    </div>
+                                    <div class="detail-info">
+                                        <h3>Custom Exhibition Stand</h3>
+                                        <p>Stand Size: 20m×50m - Usable Area: 1000 sqm - City: Tabriz</p>
+                                        <div class="detail-specs">
+                                            <div class="spec-item">
+                                                <span class="spec-label">Size:</span>
+                                                <span class="spec-value">20m × 50m</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Area:</span>
+                                                <span class="spec-value">1000 sqm</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Location:</span>
+                                                <span class="spec-value">Tabriz</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-slide" data-index="1">
+                                    <div class="detail-image">
+                                        <img src="0/روجلد_0002_Layer-31.png" alt="Exhibition Stand">
+                                    </div>
+                                    <div class="detail-info">
+                                        <h3>Modern Exhibition Design</h3>
+                                        <p>Exhibition Stand Design By XINO</p>
+                                        <div class="detail-specs">
+                                            <div class="spec-item">
+                                                <span class="spec-label">Style:</span>
+                                                <span class="spec-value">Modern</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Features:</span>
+                                                <span class="spec-value">Open Space</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Type:</span>
+                                                <span class="spec-value">Custom Build</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-slide" data-index="2">
+                                    <div class="detail-image">
+                                        <img src="0/روجلد_0001_Layer-32.png" alt="Exhibition Stand">
+                                    </div>
+                                    <div class="detail-info">
+                                        <h3>Innovative Stand Design</h3>
+                                        <p>Premium Exhibition Space with Custom Features</p>
+                                        <div class="detail-specs">
+                                            <div class="spec-item">
+                                                <span class="spec-label">Design:</span>
+                                                <span class="spec-value">Innovative</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Lighting:</span>
+                                                <span class="spec-value">Dynamic LED</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Materials:</span>
+                                                <span class="spec-value">Premium</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-slide" data-index="3">
+                                    <div class="detail-image">
+                                        <img src="0/روجلد_0000_Layer-33.png" alt="Exhibition Stand">
+                                    </div>
+                                    <div class="detail-info">
+                                        <h3>Compact Exhibition Stand</h3>
+                                        <p>Efficient Use of Space for Maximum Impact</p>
+                                        <div class="detail-specs">
+                                            <div class="spec-item">
+                                                <span class="spec-label">Size:</span>
+                                                <span class="spec-value">Compact</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Efficiency:</span>
+                                                <span class="spec-value">High</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Setup Time:</span>
+                                                <span class="spec-value">Fast</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-slide" data-index="4">
+                                    <div class="detail-image">
+                                        <img src="0/روجلد_0023_Layer-25.png" alt="Exhibition Stand">
+                                    </div>
+                                    <div class="detail-info">
+                                        <h3>Premium Exhibition Space</h3>
+                                        <p>Custom Exhibition Stand Design & Build</p>
+                                        <div class="detail-specs">
+                                            <div class="spec-item">
+                                                <span class="spec-label">Quality:</span>
+                                                <span class="spec-value">Premium</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Branding:</span>
+                                                <span class="spec-value">Integrated</span>
+                                            </div>
+                                            <div class="spec-item">
+                                                <span class="spec-label">Experience:</span>
+                                                <span class="spec-value">Immersive</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-dots">
+                                <span class="detail-dot active" data-index="0"></span>
+                                <span class="detail-dot" data-index="1"></span>
+                                <span class="detail-dot" data-index="2"></span>
+                                <span class="detail-dot" data-index="3"></span>
+                                <span class="detail-dot" data-index="4"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: About (moved from slide 2) -->
+            <section id="slide-3" class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2>About Us</h2>
+                        <div class="divider"></div>
+                        <h3>Custom Exhibition Stand Design & Build</h3>
+                        <p>At XINO Design Group, we specialize in creating stunning, functional exhibition stands that capture the essence of your brand and attract attention. With years of experience and a passion for innovative design, we deliver exhibition solutions that exceed expectations.</p>
+                        <p>Our team of architects and designers work closely with you to understand your brand values and objectives, ensuring that every element of your exhibition stand aligns with your vision.</p>
+                    </div>
+                    <div class="slide-image">
+                        <img src="0/روجلد_0041_XINO-DESIGN-GROUP.png" alt="About XINO">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Services -->
+            <section id="slide-4" class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2>Our Services</h2>
+                        <div class="divider"></div>
+                        <div class="services-list">
+                            <div class="service-item active">
+                                <div class="service-icon">
+                                    <i class="fas fa-pencil-ruler"></i>
+                                </div>
+                                <h3>Design</h3>
+                                <p>Custom exhibition stand designs that reflect your brand's unique identity and objectives.</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-hammer"></i>
+                                </div>
+                                <h3>Build</h3>
+                                <p>Professional construction and installation of your exhibition stand, ensuring quality and durability.</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h3>Logistics</h3>
+                                <p>Complete logistics management, including transportation, installation, and dismantling.</p>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h3>Concept Development</h3>
+                                <p>Creative concept development to ensure your exhibition stand stands out from the competition.</p>
+                            </div>
+                        </div>
+                        <div class="service-dots">
+                            <span class="service-dot active" data-index="0"></span>
+                            <span class="service-dot" data-index="1"></span>
+                            <span class="service-dot" data-index="2"></span>
+                            <span class="service-dot" data-index="3"></span>
+                        </div>
+                    </div>
+                    <div class="slide-image service-image">
+                        <img src="0/روجلد_0019_-Exhibition-Stand-Design-By-XINO.png" alt="Service">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Contact -->
+            <section id="slide-5" class="slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <h2>Contact Us</h2>
+                        <div class="divider"></div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 Exhibition Street, Design District</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <p>+98 123 456 7890</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>info@xinodesign.com</p>
+                            </div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="slide-image contact-image">
+                        <img src="0/روجلد_0044_Layer-5-copy-2.png" alt="Contact">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">XINO DESIGN GROUP</div>
+            <p>&copy; 2023 XINO Design Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- 3D Exhibition Stand Background -->
+    <script>
+        // Wait for document to fully load
+        window.addEventListener('load', function() {
+            console.log("Window loaded, initializing 3D background...");
+            
+            // Alternative background - CSS gradient if 3D fails
+            setTimeout(function() {
+                const canvas = document.getElementById('background-canvas');
+                
+                // Check if THREE was loaded successfully
+                if (typeof THREE === 'undefined') {
+                    console.error("THREE.js library not loaded, using CSS background instead");
+                    
+                    // Create a CSS gradient background instead
+                    document.body.style.background = 'linear-gradient(135deg, #0d253f 0%, #01b8aa 100%)';
+                    
+                    if (canvas) {
+                        canvas.style.display = 'none';
+                    }
+                    
+                    return;
+                }
+                
+                console.log("THREE.js loaded successfully, initializing 3D scene");
+                
+                // Initialize Three.js scene
+                try {
+                    // Basic renderer setup
+                    const renderer = new THREE.WebGLRenderer({
+                        canvas: canvas,
+                        antialias: true
+                    });
+                    
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                    renderer.setClearColor(0x0d253f, 1);
+                    
+                    // Create scene
+                    const scene = new THREE.Scene();
+                    
+                    // Create camera
+                    const camera = new THREE.PerspectiveCamera(
+                        60, 
+                        window.innerWidth / window.innerHeight, 
+                        0.1, 
+                        1000
+                    );
+                    camera.position.set(0, 2, 8);
+                    
+                    // Add mouse control for rotation
+                    let mouseX = 0, mouseY = 0;
+                    let targetRotationX = 0, targetRotationY = 0;
+                    const windowHalfX = window.innerWidth / 2;
+                    const windowHalfY = window.innerHeight / 2;
+                    
+                    document.addEventListener('mousemove', function(event) {
+                        mouseX = (event.clientX - windowHalfX) / 100;
+                        mouseY = (event.clientY - windowHalfY) / 100;
+                    });
+                    
+                    // Create texture loader with error handling
+                    const textureLoader = new THREE.TextureLoader();
+                    
+                    // Helper function to load textures with fallback
+                    function loadTextureWithFallback(url, fallbackColor = 0xcccccc) {
+                        const material = new THREE.MeshPhongMaterial({ color: fallbackColor, shininess: 30 });
+                        
+                        try {
+                            textureLoader.load(
+                                url,
+                                // Success callback
+                                function(texture) {
+                                    material.map = texture;
+                                    material.needsUpdate = true;
+                                },
+                                // Progress callback
+                                undefined,
+                                // Error callback
+                                function(err) {
+                                    console.log('Error loading texture:', url);
+                                }
+                            );
+                        } catch (e) {
+                            console.log('Error setting up texture:', url);
+                        }
+                        
+                        return material;
+                    }
+                    
+                    // Create materials with fallbacks
+                    const woodMaterial = loadTextureWithFallback('https://threejs.org/examples/textures/hardwood2_diffuse.jpg', 0xaa8866);
+                    const floorMaterial = loadTextureWithFallback('https://threejs.org/examples/textures/hardwood2_roughness.jpg', 0xeeeeee);
+                    const metalMaterial = loadTextureWithFallback('https://threejs.org/examples/textures/metal_diffuse.jpg', 0x888888);
+                    const screenMaterial = loadTextureWithFallback('https://threejs.org/examples/textures/disturb.jpg', 0x222222);
+                    
+                    // Monitor screen textures - more realistic
+                    const monitorTexture = textureLoader.load('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+                    
+                    // Create simple exhibition stand model
+                    const standGroup = new THREE.Group();
+                    
+                    // Floor - more realistic
+                    const floorGeometry = new THREE.BoxGeometry(10, 0.2, 6);
+                    const floor = new THREE.Mesh(floorGeometry, floorMaterial);
+                    floor.position.y = -0.1;
+                    floor.receiveShadow = true;
+                    standGroup.add(floor);
+                    
+                    // Create realistic exhibition stand with platform
+                    const platformGeometry = new THREE.BoxGeometry(8, 0.1, 4);
+                    const platform = new THREE.Mesh(platformGeometry, woodMaterial);
+                    platform.position.y = 0.05;
+                    platform.castShadow = true;
+                    platform.receiveShadow = true;
+                    standGroup.add(platform);
+                    
+                    // Add carpeting to platform
+                    const carpetGeometry = new THREE.BoxGeometry(7.8, 0.02, 3.8);
+                    const carpetMaterial = new THREE.MeshPhongMaterial({
+                        color: 0x01b8aa,
+                        shininess: 10
+                    });
+                    const carpet = new THREE.Mesh(carpetGeometry, carpetMaterial);
+                    carpet.position.y = 0.11;
+                    carpet.receiveShadow = true;
+                    standGroup.add(carpet);
+                    
+                    // Front counter/reception desk - more detailed and branded
+                    const counterGroup = new THREE.Group();
+                    
+                    // Main counter body
+                    const counterBaseGeometry = new THREE.BoxGeometry(4, 0.9, 0.8);
+                    const counterBaseMaterial = new THREE.MeshPhongMaterial({
+                        color: 0xffffff,
+                        shininess: 70
+                    });
+                    const counterBase = new THREE.Mesh(counterBaseGeometry, counterBaseMaterial);
+                    counterBase.position.set(0, 0.45, 2);
+                    counterBase.castShadow = true;
+                    counterBase.receiveShadow = true;
+                    counterGroup.add(counterBase);
+                    
+                    // Counter top
+                    const counterTopGeometry = new THREE.BoxGeometry(4.2, 0.05, 0.9);
+                    const counterTopMaterial = new THREE.MeshPhongMaterial({
+                        color: 0x01b8aa,
+                        shininess: 90
+                    });
+                    const counterTop = new THREE.Mesh(counterTopGeometry, counterTopMaterial);
+                    counterTop.position.set(0, 0.93, 2);
+                    counterTop.castShadow = true;
+                    counterGroup.add(counterTop);
+                    
+                    // Counter front panel with logo
+                    const panelGeometry = new THREE.PlaneGeometry(3, 0.6);
+                    const panelMaterial = new THREE.MeshPhongMaterial({
+                        color: 0x01b8aa,
+                        shininess: 50,
+                        emissive: 0x01b8aa,
+                        emissiveIntensity: 0.2
+                    });
+                    const panel = new THREE.Mesh(panelGeometry, panelMaterial);
+                    panel.position.set(0, 0.6, 2.41);
+                    counterGroup.add(panel);
+                    
+                    // Add "XINO" text as a simple box instead of TextGeometry
+                    const textBoxGeometry = new THREE.BoxGeometry(1.2, 0.3, 0.02);
+                    const textBoxMaterial = new THREE.MeshPhongMaterial({
+                        color: 0x01b8aa,
+                        emissive: 0x01b8aa,
+                        emissiveIntensity: 0.3,
+                        shininess: 100
+                    });
+                    const textBox = new THREE.Mesh(textBoxGeometry, textBoxMaterial);
+                    textBox.position.set(0, 0.6, 2.42);
+                    counterGroup.add(textBox);
+                    
+                    standGroup.add(counterGroup);
+                    
+                    // Add product display pedestals
+                    function createPedestal(x, z, size = 1, color = 0xffffff) {
+                        const pedestalGroup = new THREE.Group();
+                        
+                        // Base - make it curved and more stylish
+                        const baseGeometry = new THREE.CylinderGeometry(size * 0.5, size * 0.6, 0.1, 32);
+                        const baseMaterial = new THREE.MeshPhongMaterial({
+                            color: 0x333333,
+                            shininess: 60
+                        });
+                        const base = new THREE.Mesh(baseGeometry, baseMaterial);
+                        base.position.y = 0.05;
+                        base.castShadow = true;
+                        base.receiveShadow = true;
+                        pedestalGroup.add(base);
+                        
+                        // Pedestal body - make it look more premium
+                        const bodyGeometry = new THREE.CylinderGeometry(size * 0.4, size * 0.5, size * 0.9, 32);
+                        const bodyMaterial = new THREE.MeshPhongMaterial({
+                            color: color,
+                            shininess: 90
+                        });
+                        const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+                        body.position.y = size * 0.45 + 0.05;
+                        body.castShadow = true;
+                        body.receiveShadow = true;
+                        pedestalGroup.add(body);
+                        
+                        // Top surface - glass-like
+                        const topGeometry = new THREE.CylinderGeometry(size * 0.45, size * 0.45, 0.05, 32);
+                        const topMaterial = new THREE.MeshPhongMaterial({
+                            color: 0xffffff,
+                            transparent: true,
+                            opacity: 0.7,
+                            shininess: 100
+                        });
+                        const top = new THREE.Mesh(topGeometry, topMaterial);
+                        top.position.y = size * 0.9 + 0.1;
+                        top.castShadow = true;
+                        pedestalGroup.add(top);
+                        
+                        // Create a realistic product to display
+                        if (x < 0) { // Left pedestal - tablet/phone display
+                            const productGroup = new THREE.Group();
+                            
+                            // Base stand
+                            const standGeometry = new THREE.BoxGeometry(size * 0.2, size * 0.2, size * 0.01);
+                            const standMaterial = new THREE.MeshPhongMaterial({
+                                color: 0x888888,
+                                shininess: 70
+                            });
+                            const stand = new THREE.Mesh(standGeometry, standMaterial);
+                            stand.position.y = size * 0.05;
+                            stand.castShadow = true;
+                            productGroup.add(stand);
+                            
+                            // Tablet/Phone
+                            const deviceGeometry = new THREE.BoxGeometry(size * 0.3, size * 0.4, size * 0.02);
+                            const deviceMaterial = new THREE.MeshPhongMaterial({
+                                color: 0x111111,
+                                shininess: 100
+                            });
+                            const device = new THREE.Mesh(deviceGeometry, deviceMaterial);
+                            device.position.y = size * 0.2;
+                            device.rotation.x = -Math.PI / 10; // Slight tilt
+                            device.castShadow = true;
+                            productGroup.add(device);
+                            
+                            // Screen
+                            const screenGeometry = new THREE.PlaneGeometry(size * 0.28, size * 0.38);
+                            const screenMaterial = new THREE.MeshPhongMaterial({
+                                color: 0x01b8aa,
+                                emissive: 0x01b8aa,
+                                emissiveIntensity: 0.5,
+                                shininess: 100
+                            });
+                            const screen = new THREE.Mesh(screenGeometry, screenMaterial);
+                            screen.position.y = size * 0.2;
+                            screen.position.z = size * 0.012;
+                            screen.rotation.x = -Math.PI / 10; // Match device tilt
+                            productGroup.add(screen);
+                            
+                            productGroup.position.y = size * 0.9 + 0.15;
+                            pedestalGroup.add(productGroup);
+                        } else if (x > 0) { // Right pedestal - design award trophy
+                            const trophyGroup = new THREE.Group();
+                            
+                            // Trophy base
+                            const trophyBaseGeometry = new THREE.CylinderGeometry(size * 0.15, size * 0.2, size * 0.1, 32);
+                            const trophyBaseMaterial = new THREE.MeshPhongMaterial({
+                                color: 0xfd7e14,
+                                shininess: 100
+                            });
+                            const trophyBase = new THREE.Mesh(trophyBaseGeometry, trophyBaseMaterial);
+                            trophyBase.castShadow = true;
+                            trophyGroup.add(trophyBase);
+                            
+                            // Trophy stem
+                            const stemGeometry = new THREE.CylinderGeometry(size * 0.05, size * 0.05, size * 0.2, 32);
+                            const stemMaterial = new THREE.MeshPhongMaterial({
+                                color: 0xfd7e14,
+                                shininess: 100
+                            });
+                            const stem = new THREE.Mesh(stemGeometry, stemMaterial);
+                            stem.position.y = size * 0.15;
+                            stem.castShadow = true;
+                            trophyGroup.add(stem);
+                            
+                            // Trophy cup
+                            const cupBottomGeometry = new THREE.CylinderGeometry(size * 0.1, size * 0.05, size * 0.1, 32);
+                            const cupBottom = new THREE.Mesh(cupBottomGeometry, trophyBaseMaterial);
+                            cupBottom.position.y = size * 0.3;
+                            cupBottom.castShadow = true;
+                            trophyGroup.add(cupBottom);
+                            
+                            const cupTopGeometry = new THREE.CylinderGeometry(size * 0.15, size * 0.1, size * 0.15, 32);
+                            const cupTop = new THREE.Mesh(cupTopGeometry, trophyBaseMaterial);
+                            cupTop.position.y = size * 0.425;
+                            cupTop.castShadow = true;
+                            trophyGroup.add(cupTop);
+                            
+                            trophyGroup.position.y = size * 0.9 + 0.15;
+                            pedestalGroup.add(trophyGroup);
+                        } else { // Center pedestal - architectural model
+                            const modelGroup = new THREE.Group();
+                            
+                            // Base of model
+                            const modelBaseGeometry = new THREE.BoxGeometry(size * 0.4, size * 0.02, size * 0.4);
+                            const modelBaseMaterial = new THREE.MeshPhongMaterial({
+                                color: 0x01b8aa,
+                                shininess: 50
+                            });
+                            const modelBase = new THREE.Mesh(modelBaseGeometry, modelBaseMaterial);
+                            modelBase.castShadow = true;
+                            modelGroup.add(modelBase);
+                            
+                            // Create a small building structures
+                            for (let i = 0; i < 3; i++) {
+                                const height = (3 - i) * size * 0.1;
+                                const buildingGeometry = new THREE.BoxGeometry(size * 0.1, height, size * 0.1);
+                                const buildingMaterial = new THREE.MeshPhongMaterial({
+                                    color: 0xffffff,
+                                    shininess: 70
+                                });
+                                const building = new THREE.Mesh(buildingGeometry, buildingMaterial);
+                                building.position.set(
+                                    (i - 1) * size * 0.1,
+                                    height / 2 + size * 0.02,
+                                    0
+                                );
+                                building.castShadow = true;
+                                modelGroup.add(building);
+                            }
+                            
+                            modelGroup.position.y = size * 0.9 + 0.15;
+                            pedestalGroup.add(modelGroup);
+                        }
+                        
+                        // Position the pedestal
+                        pedestalGroup.position.set(x, 0, z);
+                        
+                        return pedestalGroup;
+                    }
+                    
+                    // Add pedestals with different sizes and styles
+                    standGroup.add(createPedestal(-3, 0, 1.2, 0xffffff));
+                    standGroup.add(createPedestal(0, -1.5, 0.8, 0x01b8aa));
+                    standGroup.add(createPedestal(3, 0, 1, 0xfd7e14));
+                    
+                    // Add people to the scene
+                    function createPerson(x, z, rotation, type = 'visitor') {
+                        const personGroup = new THREE.Group();
+                        let height, bodyColor, legColor;
+                        
+                        if (type === 'staff') {
+                            height = 1.7;
+                            bodyColor = 0x01b8aa; // Staff in brand color
+                            legColor = 0x111111;
+                        } else {
+                            height = 1.6 + Math.random() * 0.2;
+                            bodyColor = 0x333333 + Math.floor(Math.random() * 0xaaaaaa);
+                            legColor = 0x111111 + Math.floor(Math.random() * 0x333333);
+                        }
+                        
+                        // More realistic head with face features
+                        const headGroup = new THREE.Group();
+                        
+                        // Head base
+                        const headGeometry = new THREE.SphereGeometry(0.15, 32, 32);
+                        const headMaterial = new THREE.MeshPhongMaterial({
+                            color: 0xEAC7B4, // Skin tone
+                            shininess: 30
+                        });
+                        const head = new THREE.Mesh(headGeometry, headMaterial);
+                        head.castShadow = true;
+                        headGroup.add(head);
+                        
+                        // Hair
+                        const hairGeometry = new THREE.SphereGeometry(0.16, 32, 32, 0, Math.PI * 2, 0, Math.PI / 2);
+                        const hairMaterial = new THREE.MeshPhongMaterial({
+                            color: 0x111111, // Dark hair
+                            shininess: 5
+                        });
+                        const hair = new THREE.Mesh(hairGeometry, hairMaterial);
+                        hair.rotation.x = Math.PI;
+                        hair.position.y = 0.02;
+                        hair.castShadow = true;
+                        headGroup.add(hair);
+                        
+                        // Eyes
+                        const eyeGeometry = new THREE.SphereGeometry(0.02, 16, 16);
+                        const eyeMaterial = new THREE.MeshPhongMaterial({
+                            color: 0xffffff,
+                            shininess: 100
+                        });
+                        const eyeMaterialIris = new THREE.MeshPhongMaterial({
+                            color: 0x000000,
+                            shininess: 10
+                        });
+                        
+                        // Left eye
+                        const leftEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+                        leftEye.position.set(-0.05, 0.02, 0.13);
+                        headGroup.add(leftEye);
+                        
+                        // Left iris
+                        const leftIris = new THREE.Mesh(new THREE.SphereGeometry(0.01, 8, 8), eyeMaterialIris);
+                        leftIris.position.set(-0.05, 0.02, 0.15);
+                        headGroup.add(leftIris);
+                        
+                        // Right eye
+                        const rightEye = new THREE.Mesh(eyeGeometry, eyeMaterial);
+                        rightEye.position.set(0.05, 0.02, 0.13);
+                        headGroup.add(rightEye);
+                        
+                        // Right iris
+                        const rightIris = new THREE.Mesh(new THREE.SphereGeometry(0.01, 8, 8), eyeMaterialIris);
+                        rightIris.position.set(0.05, 0.02, 0.15);
+                        headGroup.add(rightIris);
+                        
+                        // Mouth
+                        const mouthGeometry = new THREE.BoxGeometry(0.07, 0.02, 0.01);
+                        const mouthMaterial = new THREE.MeshPhongMaterial({
+                            color: 0xAA4444,
+                            shininess: 20
+                        });
+                        const mouth = new THREE.Mesh(mouthGeometry, mouthMaterial);
+                        mouth.position.set(0, -0.06, 0.14);
+                        headGroup.add(mouth);
+                        
+                        // Add head group to person
+                        headGroup.position.y = height - 0.15;
+                        personGroup.add(headGroup);
+                        
+                        // Create realistic clothes
+                        // Upper body/torso
+                        const torsoGeometry = new THREE.CylinderGeometry(0.2, 0.15, 0.6, 16);
+                        
+                        // Create a jacket effect for some visitors
+                        if (type === 'visitor' && Math.random() > 0.5) {
+                            // Shirt
+                            const shirtGeometry = new THREE.CylinderGeometry(0.19, 0.14, 0.58, 16);
+                            const shirtMaterial = new THREE.MeshPhongMaterial({
+                                color: 0xffffff,
+                                shininess: 20
+                            });
+                            const shirt = new THREE.Mesh(shirtGeometry, shirtMaterial);
+                            shirt.position.y = height - 0.5;
+                            shirt.castShadow = true;
+                            personGroup.add(shirt);
+                            
+                            // Jacket
+                            const jacketMaterial = new THREE.MeshPhongMaterial({
+                                color: bodyColor,
+                                shininess: 40
+                            });
+                            const jacket = new THREE.Mesh(torsoGeometry, jacketMaterial);
+                            jacket.scale.set(1.05, 1.02, 1.05);
+                            jacket.position.y = height - 0.5;
+                            jacket.castShadow = true;
+                            personGroup.add(jacket);
+                        } else {
+                            // Just regular clothing
+                            const bodyMaterial = new THREE.MeshPhongMaterial({
+                                color: bodyColor,
+                                shininess: 30
+                            });
+                            const body = new THREE.Mesh(torsoGeometry, bodyMaterial);
+                            body.position.y = height - 0.5;
+                            body.castShadow = true;
+                            personGroup.add(body);
+                        }
+                        
+                        // Legs with better shape and realistic bending
+                        for (let side = -1; side <= 1; side += 2) {
+                            if (side === 0) continue; // Skip middle
+                            
+                            // Upper leg
+                            const thighGeometry = new THREE.CylinderGeometry(0.07, 0.06, 0.4, 16);
+                            const legMaterial = new THREE.MeshPhongMaterial({
+                                color: legColor,
+                                shininess: 30
+                            });
+                            const thigh = new THREE.Mesh(thighGeometry, legMaterial);
+                            
+                            // Position at hip and add slight angle
+                            thigh.position.set(side * 0.08, height - 0.9, 0);
+                            thigh.rotation.z = side * 0.1;
+                            thigh.castShadow = true;
+                            personGroup.add(thigh);
+                            
+                            // Lower leg
+                            const calfGeometry = new THREE.CylinderGeometry(0.06, 0.05, 0.4, 16);
+                            const calf = new THREE.Mesh(calfGeometry, legMaterial);
+                            
+                            // Position below knee with slight bend
+                            calf.position.set(
+                                side * 0.1, 
+                                height - 1.3, 
+                                side === -1 ? 0.05 : -0.05 // Slight asymmetry
+                            );
+                            calf.rotation.z = side * 0.05;
+                            calf.castShadow = true;
+                            personGroup.add(calf);
+                            
+                            // Add a foot
+                            const footGeometry = new THREE.BoxGeometry(0.08, 0.05, 0.15);
+                            const footMaterial = new THREE.MeshPhongMaterial({
+                                color: 0x000000, // Black shoes
+                                shininess: 80
+                            });
+                            const foot = new THREE.Mesh(footGeometry, footMaterial);
+                            foot.position.set(
+                                side * 0.1,
+                                height - 1.525,
+                                0.05 // Extend forward
+                            );
+                            foot.castShadow = true;
+                            personGroup.add(foot);
+                        }
+                        
+                        // Arms with elbow bend
+                        for (let side = -1; side <= 1; side += 2) {
+                            if (side === 0) continue; // Skip middle
+                            
+                            // Upper arm
+                            const upperArmGeometry = new THREE.CylinderGeometry(0.05, 0.05, 0.3, 16);
+                            const armMaterial = new THREE.MeshPhongMaterial({
+                                color: bodyColor,
+                                shininess: 30
+                            });
+                            const upperArm = new THREE.Mesh(upperArmGeometry, armMaterial);
+                            
+                            // Position at shoulder with angle
+                            upperArm.position.set(side * 0.25, height - 0.35, 0);
+                            upperArm.rotation.z = side * Math.PI / 4;
+                            upperArm.castShadow = true;
+                            personGroup.add(upperArm);
+                            
+                            // Lower arm
+                            const lowerArmGeometry = new THREE.CylinderGeometry(0.04, 0.04, 0.3, 16);
+                            const lowerArm = new THREE.Mesh(lowerArmGeometry, armMaterial);
+                            
+                            // Create realistic elbow bend
+                            const elbowAngle = side * Math.PI / 4;
+                            const armExtension = 0.2;
+                            
+                            lowerArm.position.set(
+                                side * (0.25 + armExtension * Math.sin(elbowAngle)),
+                                height - 0.35 - armExtension * Math.cos(elbowAngle),
+                                0.1
+                            );
+                            lowerArm.rotation.z = side * Math.PI / 3;
+                            lowerArm.rotation.x = Math.PI / 8;
+                            lowerArm.castShadow = true;
+                            personGroup.add(lowerArm);
+                            
+                            // Add a hand
+                            const handGeometry = new THREE.SphereGeometry(0.04, 16, 16);
+                            const handMaterial = new THREE.MeshPhongMaterial({
+                                color: 0xEAC7B4, // Skin tone
+                                shininess: 30
+                            });
+                            const hand = new THREE.Mesh(handGeometry, handMaterial);
+                            
+                            // Position at end of arm
+                            const handExtension = 0.3;
+                            hand.position.set(
+                                side * (0.25 + armExtension * Math.sin(elbowAngle) + handExtension * Math.sin(side * Math.PI / 3)),
+                                height - 0.35 - armExtension * Math.cos(elbowAngle) - handExtension * Math.cos(side * Math.PI / 3),
+                                0.15
+                            );
+                            hand.castShadow = true;
+                            personGroup.add(hand);
+                        }
+                        
+                        // Position and rotate the person
+                        personGroup.position.set(x, 0, z);
+                        personGroup.rotation.y = rotation;
+                        
+                        return personGroup;
+                    }
+                    
+                    // Add staff behind counter
+                    standGroup.add(createPerson(-0.8, 1.5, Math.PI, 'staff'));
+                    standGroup.add(createPerson(0.8, 1.5, Math.PI, 'staff'));
+                    
+                    // Add visitors
+                    standGroup.add(createPerson(-2, 2.5, Math.PI / 6, 'visitor'));
+                    standGroup.add(createPerson(2, 3, -Math.PI / 8, 'visitor'));
+                    standGroup.add(createPerson(-3.5, -1, Math.PI / 2, 'visitor'));
+                    standGroup.add(createPerson(3.5, -1.5, -Math.PI / 3, 'visitor'));
+                    
+                    // Add logo floating sign
+                    const logoGeometry = new THREE.CircleGeometry(1.2, 32);
+                    const logoMaterial = new THREE.MeshPhongMaterial({ 
+                        color: 0x01b8aa,
+                        emissive: 0x01b8aa,
+                        emissiveIntensity: 0.3,
+                        shininess: 90,
+                        side: THREE.DoubleSide
+                    });
+                    const logo = new THREE.Mesh(logoGeometry, logoMaterial);
+                    logo.position.set(0, 2.5, -2);
+                    logo.rotation.y = Math.PI;
+                    logo.castShadow = true;
+                    standGroup.add(logo);
+                    
+                    // Add TV display screens
+                    function createTVScreen(x, y, z, rotation) {
+                        const tvGroup = new THREE.Group();
+                        
+                        // TV frame
+                        const frameGeometry = new THREE.BoxGeometry(1.6, 1, 0.1);
+                        const frameMaterial = new THREE.MeshPhongMaterial({
+                            color: 0x111111,
+                            shininess: 80
+                        });
+                        const frame = new THREE.Mesh(frameGeometry, frameMaterial);
+                        frame.castShadow = true;
+                        tvGroup.add(frame);
+                        
+                        // Screen
+                        const screenGeometry = new THREE.PlaneGeometry(1.5, 0.9);
+                        const screen = new THREE.Mesh(screenGeometry, screenMaterial);
+                        screen.position.z = 0.051;
+                        tvGroup.add(screen);
+                        
+                        // Stand
+                        const standGeometry = new THREE.BoxGeometry(0.3, 1.5, 0.2);
+                        const standMaterial = new THREE.MeshPhongMaterial({
+                            color: 0x333333,
+                            shininess: 50
+                        });
+                        const stand = new THREE.Mesh(standGeometry, standMaterial);
+                        stand.position.y = -1.25;
+                        stand.castShadow = true;
+                        tvGroup.add(stand);
+                        
+                        // Position and rotate
+                        tvGroup.position.set(x, y, z);
+                        tvGroup.rotation.y = rotation;
+                        
+                        return tvGroup;
+                    }
+                    
+                    standGroup.add(createTVScreen(-4, 1.5, -1.5, Math.PI / 6));
+                    standGroup.add(createTVScreen(4, 1.5, -1.5, -Math.PI / 6));
+                    
+                    // Add the stand to the scene
+                    scene.add(standGroup);
+                    
+                    // Add lighting with shadows
+                    // Ambient light for overall scene
+                    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+                    scene.add(ambientLight);
+                    
+                    // Main directional light with shadows
+                    const mainLight = new THREE.DirectionalLight(0xffffff, 0.8);
+                    mainLight.position.set(5, 10, 5);
+                    mainLight.castShadow = true;
+                    
+                    // Configure shadow properties
+                    mainLight.shadow.mapSize.width = 1024;
+                    mainLight.shadow.mapSize.height = 1024;
+                    mainLight.shadow.camera.near = 0.5;
+                    mainLight.shadow.camera.far = 50;
+                    mainLight.shadow.camera.left = -7;
+                    mainLight.shadow.camera.right = 7;
+                    mainLight.shadow.camera.top = 7;
+                    mainLight.shadow.camera.bottom = -7;
+                    scene.add(mainLight);
+                    
+                    // Add accent lights for the brand colors
+                    const accentLight1 = new THREE.PointLight(0x01b8aa, 1, 10);
+                    accentLight1.position.set(3, 3, 3);
+                    scene.add(accentLight1);
+                    
+                    const accentLight2 = new THREE.PointLight(0xfd7e14, 1, 10);
+                    accentLight2.position.set(-3, 2, -3);
+                    scene.add(accentLight2);
+                    
+                    // Enable shadows on renderer
+                    renderer.shadowMap.enabled = true;
+                    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+                    
+                    // Animation loop with mouse control
+                    function animate() {
+                        requestAnimationFrame(animate);
+                        
+                        // Smooth rotation based on mouse position
+                        targetRotationY += (mouseX * 0.05 - targetRotationY) * 0.05;
+                        targetRotationX += (mouseY * 0.05 - targetRotationX) * 0.05;
+                        
+                        // Apply rotation with limits to prevent flipping
+                        standGroup.rotation.y = targetRotationY;
+                        standGroup.rotation.x = Math.max(-0.5, Math.min(0.5, targetRotationX));
+                        
+                        renderer.render(scene, camera);
+                    }
+                    
+                    // Handle window resize
+                    window.addEventListener('resize', function() {
+                        const width = window.innerWidth;
+                        const height = window.innerHeight;
+                        
+                        windowHalfX = width / 2;
+                        windowHalfY = height / 2;
+                        
+                        camera.aspect = width / height;
+                        camera.updateProjectionMatrix();
+                        renderer.setSize(width, height);
+                    });
+                    
+                    // Add zoom with mouse wheel
+                    canvas.addEventListener('wheel', function(event) {
+                        // Prevent default scrolling
+                        event.preventDefault();
+                        
+                        const zoomSpeed = 0.1;
+                        
+                        // Move camera closer or further based on wheel direction
+                        if (event.deltaY < 0) {
+                            // Zoom in (move closer)
+                            camera.position.z = Math.max(4, camera.position.z - zoomSpeed);
+                        } else {
+                            // Zoom out (move further)
+                            camera.position.z = Math.min(12, camera.position.z + zoomSpeed);
+                        }
+                    });
+                    
+                    // Start animation
+                    animate();
+                    console.log("3D animation started successfully with custom mouse controls");
+                    
+                    // Style canvas
+                    canvas.style.position = 'fixed';
+                    canvas.style.top = 0;
+                    canvas.style.left = 0;
+                    canvas.style.width = '100%';
+                    canvas.style.height = '100%';
+                    canvas.style.zIndex = '-1';
+                    canvas.style.pointerEvents = 'auto'; // Allow mouse interaction
+                    
+                } catch (error) {
+                    console.error("Error initializing Three.js scene:", error);
+                    
+                    // Fallback to CSS background
+                    document.body.style.background = 'linear-gradient(135deg, #0d253f 0%, #01b8aa 100%)';
+                    
+                    if (canvas) {
+                        canvas.style.display = 'none';
+                    }
+                }
+            }, 200); // Short delay to ensure DOM is fully loaded
+        });
+    </script>
+</body>
+</html> 
